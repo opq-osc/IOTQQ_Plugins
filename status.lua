@@ -6,7 +6,7 @@ function ReceiveFriendMsg(CurrentQQ, data)
     return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
-if (string.find(data.Content, "status") == 1) then
+if (string.find(data.Content, "状态") == 1) then
         response, error_message =
             http.request(
             "GET",
@@ -23,7 +23,7 @@ if (string.find(data.Content, "status") == 1) then
                     sendToType = 2,
                     sendMsgType = "TextMsg", 
                     groupid = 0,
-                    content = "ClusterIP: " ..a.ClusterIP.. "\nGCTime: " ..a.GCTime.. "\nGoVersion: " ..a.GoVersion.. "\nTotalAlloc: " ..a.TotalAlloc.. "\nServerRuntime: " ..a.ServerRuntime.. "",
+                    content = "ClusterIP: " ..a.ClusterIP.. "\nCPU：" ..a.CpuNum.. "C\nGCTime: " ..a.GCTime.. "\nGoVersion: " ..a.GoVersion.. "\nOPQBOTVersion: " ..a.Version.. "\nTotalAlloc: " ..a.TotalAlloc.. "\nServerRuntime: " ..a.ServerRuntime.. "",
                     atUser = 0
                 }
             )
