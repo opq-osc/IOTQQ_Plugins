@@ -45,5 +45,7 @@ TODO
 * 探空图/雷达速度图
 * FY2G海区红外图像
 * 远程控制NanoPi/BOT
+* 气象图像Git仓库归档
+* 移植一份Lua版本的[狐狸贴贴](https://github.com/fz6m/opqqq-plugin-press/tree)
 
 如遇问题可提交Issues或者在群内联系天气之子BOT&萌新
