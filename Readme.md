@@ -39,6 +39,7 @@
 * 韩剧点播
 * Status状态检查
 * 随机一言/古诗
+* MC服务器状态检查
 - - - 
 TODO
 * ASCAT风场扫描
@@ -46,6 +47,7 @@ TODO
 * FY2G海区红外图像
 * 远程控制NanoPi/BOT
 * 气象图像Git仓库归档
+* 国家级自动站要素预报
 * 移植一份Lua版本的[狐狸贴贴](https://github.com/fz6m/opqqq-plugin-press/tree)
 
 如遇问题可提交Issues或者在群内联系天气之子BOT&萌新
