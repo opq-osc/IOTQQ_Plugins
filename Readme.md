@@ -1,22 +1,25 @@
-## IOTQQ_Plugins
-2020/08/06 Plugins重构中
+## Plugins
+2020/08/06 Plugins重构中<br>
+2020/08/27 Plugins重构中(gugu)
 <br>
-![](https://img.shields.io/badge/In%20Progress-20%25-yellow)
+![](https://img.shields.io/badge/In%20Progress-21%25-yellow)
 ![](https://img.shields.io/badge/License-GPL--3.0-orange)
 ![](https://img.shields.io/badge/Status-%E6%91%B8%E9%B1%BCing-blue)
 <br>
-#### 天气之子BOT全部功能: 
+### 功能概览: 
 1.CMA
 * NMC台风路径定位
 * NMC单站雷达图像
-* NMC地面场天气图&JMA地面场天气图
+* NMC地面场/500天气图&JMA地面场天气图
 * NMC全国24小时降水发布产品
 * FY4A可见光图像
 * FY2G红外强化图像
+* FY2G海区红外图像
 * NMC华南中尺度降水预报
 * NMC海上大风预警
-* NMC北太平洋海平面高度场分析图
+* NMC北太平洋海平面分析图
 * CMA台风报文
+* CMA台风定位
 * 国家级自动站实时数据查询
 * GRAPES数值模式预报
   现有-> 全国区域/华南区域降水+10米风场/全国GRPAES_GFS
@@ -36,7 +39,9 @@
 * JMA天气图
 * CWB天气图
 * GFS西太平洋240小时预报
-* 向日葵8号加密观测可见光图像
+* 向日葵8号机动可见光图像
+* 向日葵8号机动红外BD图像
+* CIMSS全套产品 ->西太涡度低层辐合高空辐散西太风切低层涡度
 - - -
 3.其他功能
 * 闪照还原
@@ -44,16 +49,19 @@
 * Status状态检查
 * 随机一言/古诗
 * MC服务器状态检查
+* 远程控制NanoPi
 - - - 
 TODO
 * ASCAT风场扫描
 * 探空图/雷达速度图
-* FY2G海区红外图像
-* 远程控制NanoPi/BOT
 * 国家级自动站要素预报
 * 移植一份Lua版本的[狐狸贴贴](https://github.com/fz6m/opqqq-plugin-press/tree)
 * 广东省气温/降水图
 * CMA降水/气温排行榜
 * TTGFS东亚384小时预报(待定)
+
+
+### 使用
+群聊内发送指令集即可
 
 如遇问题可提交Issues或者在群内联系天气之子BOT&萌新
