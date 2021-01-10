@@ -16,7 +16,7 @@ function ReceiveGroupMsg(CurrentQQ, data)
         response, error_message = 
             http.request(
                 "GET",
-                "https://geoapi.heweather.net/v2/city/lookup?location=" ..keyWord.. "&key=95f5b0cfd4184ee2bfebdb3492ebb293"
+                "https://geoapi.heweather.net/v2/city/lookup?location=" ..url_encode(keyWord).. "&key=95f5b0cfd4184ee2bfebdb3492ebb293"
         )
         local html1 = response.body 
         local c = json.decode(html1)  
@@ -83,4 +83,19 @@ j.daily[1].windSpeedDay),
         end
 function ReceiveEvents(CurrentQQ, data, extData)
             return 1
+end
+function url_encode(str)
+    if (str) then
+        str = string.gsub(str, "\n", "\r\n")
+        str =
+            string.gsub(
+            str,
+            "([^%w ])",
+            function(c)
+                return string.format("%%%02X", string.byte(c))
+            end
+        )
+        str = string.gsub(str, " ", "+")
+    end
+    return str
 end
