@@ -6,7 +6,7 @@ function ReceiveFriendMsg(CurrentQQ, data)
     return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
-if string.find(data.Content, "poem") then
+if string.find(data.Content, "RPoem") then
         response, error_message =
             http.request(
             "GET",
