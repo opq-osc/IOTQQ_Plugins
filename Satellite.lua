@@ -16,15 +16,15 @@ if string.find(data.Content, "fy4真彩色") then
         str = html:gsub("/medium","")
 		image = json.decode(str)
 		pic = "http://image.nmc.cn/" ..image.dataList[1].imgPath.. ""
-		elseif data.Content == "fy2红外" then
+	elseif data.Content == "fy2红外" then
 		response, error_message = http.request("GET", "http://www.nmc.cn/rest/category/57")
 		html = response.body
 		str = html:gsub("/medium", "")
         image = json.decode(str)
         pic = "http://image.nmc.cn/" ..image.dataList[1].imgPath.. ""
-		else 
-		return 1
-		end
+	else 
+	return 1
+        end
 		ApiRet =
             Api.Api_SendMsg( 
             CurrentQQ,
@@ -34,11 +34,7 @@ if string.find(data.Content, "fy4真彩色") then
                 sendMsgType = "PicMsg",
                 content = "",
                 atUser = 0,
-                voiceUrl = "",
-                voiceBase64Buf = "",
                 picUrl = pic,
-                picBase64Buf = "",
-				fileMd5 = ""
             }
         )
   end
